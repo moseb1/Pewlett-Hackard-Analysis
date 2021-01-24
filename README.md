@@ -21,9 +21,12 @@ Using PostgresSQL to built HP employees database from scratch thru data modeling
 ![Retiring by Title](https://user-images.githubusercontent.com/72223864/105620149-b7e44e80-5dc7-11eb-99d7-73d4fe011d93.JPG)
 
 
-### SELECT COUNT(*) FROM employees 
-Gave us the total nunber of employees which is 300,024
-### SELECT COUNT(*) FROM retirement_titles (A table we recreated for empoyees born between 1952 and 1955)
-Gave us the total number of employees eligible for retirement = 133,776
-Thus, 45% of HP employees have reached the retirement age and HR must act now.
+#### SELECT COUNT(*) FROM employees 
+Gave us the total number of employees which is 300,024
+#### SELECT COUNT(*) FROM retirement_titles (A table we recreated for employees born between 1952 and 1955).
+The total number of employees eligible for retirement = 133,776. 
+Thus, 45% of HP employees have reached the retirement age, and HR must act now.
 
+## Conclusion 
+We upgraded Pawlett Hackard's database system from Excel to PostgresSQL for efficiency and convenience and found out 45% of their workforce 
+are eligible for retirement. 
