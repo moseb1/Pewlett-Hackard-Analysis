@@ -128,6 +128,7 @@ ON e.emp_no = de.emp_no
 RIGHT JOIN titles t
 ON e.emp_no = t.emp_no
 WHERE birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+AND (de.to_date = '9999-01-01')
 GROUP BY e.emp_no, 
 	first_name, 
 	last_name, 
@@ -136,3 +137,12 @@ GROUP BY e.emp_no,
 	de.to_date,
 	title
 ORDER BY e.emp_no;
+
+--Compare total number of retiring employees to total number of eligible mentors in each department
+SELECT rt.title, 
+total AS retiring_count, 
+COALESCE(count,0) AS mentorship_count
+INTO retiring_mentorship_by_title
+FROM mentorship_titles ms
+FULL JOIN retiring_titles rt ON ms.title = rt.title
+ORDER BY retiring_count DESC
