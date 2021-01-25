@@ -119,7 +119,7 @@ SELECT  DISTINCT ON (e.emp_no) e.emp_no,
 	last_name, 
 	birth_date,
 	de.from_date,
-	de.to_date 
+	de.to_date, 
 	title
 INTO mentorship_eligibilty
 FROM employees e
